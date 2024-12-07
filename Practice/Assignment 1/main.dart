@@ -43,9 +43,10 @@ void main() {
   print(RegExp('[1]'));
   print(numbersConverted);
   print(numbersConverted);
-  print ("Enter your email: ");
+  print("Enter your email: ");
   String email = stdin.readLineSync()!;
-  RegExp emailRegex = RegExp(r'^[^0-9][a-zA-Z^0-9._]+[^_\.]@[a-zA-Z0-9]+\.[a-zA-Z]+$');
+  RegExp emailRegex =
+      RegExp(r'^[^0-9][a-zA-Z^0-9._]+[^_\.]@[a-zA-Z0-9]+\.[a-zA-Z]+$');
   if (emailRegex.hasMatch(email)) {
     print("Email is valid.");
   } else {
@@ -55,4 +56,7 @@ void main() {
 //   print (data.keys);
 //   print (data);
 //   print (data.length);
+  numbers.sort();
+  numbers.reversed.toList();
+  print(numbers);
 }
