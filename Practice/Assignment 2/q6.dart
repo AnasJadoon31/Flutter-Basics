@@ -20,7 +20,7 @@ void main() {
 
   // Specify the country key to print its values
   String countryKey = "Pakistan";
-  
+
   // Print capital city and currency for the selected country
   if (world.containsKey(countryKey)) {
     print("Capital City of $countryKey: ${world[countryKey]!['capitalCity']}");
