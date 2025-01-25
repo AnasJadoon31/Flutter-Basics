@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:convert';
-import 'dart:isolate';
 
 class Book {
   String title;
@@ -41,9 +40,7 @@ class User {
 
   static User fromJson(Map<String, dynamic> json) {
     final user = User(json['name']);
-    user.borrowedBooks = (json['borrowedBooks'] as List<dynamic>)
-        .map((data) => Book.fromJson(data))
-        .toList();
+    user.borrowedBooks = (json['borrowedBooks'] as List<dynamic>).map((data) => Book.fromJson(data)).toList();
     return user;
   }
 }
